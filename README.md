@@ -2,16 +2,16 @@
 
 Using [HN comment](https://news.ycombinator.com/item?id=11070797).
 
-- To replicate on a new machine
+- Replicate in a new machine
 
 ```shell
-git clone --separate-git-dir=~/.dotfiles https://github.com/wjes/dotfiles.git ~/tmp
+git clone --separate-git-dir=${HOME}/.dotfiles https://github.com/wjes/dotfiles.git ${HOME}/tmp
 cp -a ~/tmp/. ~
 rm -r ~/tmp
 ```
 
-- To commit changes
+- Run git commands
 
 ```shell
-git --git-dir=~/.dotfiles/ --work-tree=~ <git-command>
+git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME} <git-command>
 ```
