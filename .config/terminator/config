@@ -1,0 +1,129 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  zoom_in = <Primary>KP_Add
+  zoom_out = <Primary>KP_Subtract
+  cycle_next = ""
+  cycle_prev = ""
+  split_horiz = <Alt>End
+  split_vert = <Alt>Page_Down
+  close_term = <Alt>Delete
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  help = ""
+[profiles]
+  [[default]]
+    background_darkness = 0.93
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Liberation Mono 9
+    foreground_color = "#c0bfbc"
+    show_titlebar = False
+    scrollbar_position = hidden
+    use_system_font = False
+  [[debug]]
+    cursor_color = "#aaaaaa"
+    font = Roboto Mono Light for Powerline Light 8
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[STNG]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1051
+      title = warren@arch:~
+      last_active_term = da8fe735-0358-4fd4-9680-0552d1904cc2
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 314
+      ratio = 0.30019120458891013
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 958
+      ratio = 0.5
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = c3cd8de8-a5ea-4188-81eb-d057e8500c48
+      command = 'sleep 5 && nix-shell --command "yarn run dev"'
+      directory = /home/warren/current/module_trib
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = a699764f-9bf3-4cab-b088-db50c3baf1a9
+      command = ./stng_mysql_service.sh
+      directory = /home/warren/current
+    [[[child5]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 369
+      ratio = 0.5075653370013755
+    [[[child6]]]
+      type = HPaned
+      parent = child5
+      order = 0
+      position = 958
+      ratio = 0.5
+    [[[terminal7]]]
+      type = Terminal
+      parent = child6
+      order = 0
+      profile = default
+      uuid = da8fe735-0358-4fd4-9680-0552d1904cc2
+      command = 'sleep 5 && nix-shell --command "yarn run dev"'
+      directory = /home/warren/current/module_api_gateway
+    [[[terminal8]]]
+      type = Terminal
+      parent = child6
+      order = 1
+      profile = default
+      uuid = 9e30e3d4-4488-4c1a-8aec-9eca06189cd1
+      command = redis-server
+      directory = ""
+    [[[terminal9]]]
+      type = Terminal
+      parent = child5
+      order = 1
+      profile = default
+      uuid = 7c81e9b9-be2c-4393-b944-40e263c04b0b
+      command = 'nix-shell --command "yarn run start"'
+      directory = /home/warren/current/module_front_end
+    [[[child10]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1051
+      title = warren@arch:~/current
+      last_active_term = 19392a6c-a1d1-49fc-8afc-5d1ea9d174b5
+      last_active_window = False
+    [[[terminal11]]]
+      type = Terminal
+      parent = child10
+      order = 0
+      profile = default
+      uuid = 19392a6c-a1d1-49fc-8afc-5d1ea9d174b5
+[plugins]

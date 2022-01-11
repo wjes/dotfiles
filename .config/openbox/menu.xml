@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="apps-net-menu" label="Internet">
+		<item label="Firefox">
+			<action name="Execute">
+				<command>firefox</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+					<wmclass>Firefox</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Opera">
+			<action name="Execute">
+				<command>opera</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+					<wmclass>Opera</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Chromium">
+			<action name="Execute">
+				<command>chromium</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Transmission">
+			<action name="Execute">
+				<command>transmission-gtk</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Telegram">
+			<action name="Execute">
+				<command>telegram-desktop</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Daedalus">
+			<action name="Execute">
+				<command>daedalus-mainnet</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-office" label="Office">
+		<item label="Writer">
+			<action name="Execute">
+				<command>wps</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+        <item label="Spreadsheet">
+			<action name="Execute">
+				<command>et</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Presentation">
+			<action name="Execute">
+				<command>wpp</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-graphics-menu" label="Graphics">
+		<item label="Gimp">
+			<action name="Execute">
+				<command>gimp</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Inkscape">
+			<action name="Execute">
+				<command>inkscape</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+    </menu>
+	<menu id="system-menu" label="System">
+		<item label="Lxappearance">
+			<action name="Execute">
+				<command>lxappearance</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Manage Cups Printers">
+			<action name="Execute">
+				<command>xdg-open http://localhost:631/</command>
+				<startupnotify>
+					<enabled>no</enabled>
+					<icon>cups</icon>
+				</startupnotify>
+			</action>
+		</item>
+		<separator/>
+		<item label="Reconfigure Openbox">
+			<action name="Reconfigure"/>
+		</item>
+		<separator/>
+		<item label="Log Out">
+			<action name="Exit">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+		<separator/>
+		<item label="Reboot">
+			<action name="Execute">
+				<execute>systemctl reboot</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Shut Down">
+			<action name="Execute">
+				<execute>systemctl poweroff</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Firefox">
+			<action name="Execute">
+                <execute>firefox</execute>
+			</action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>terminator --maximise</execute>
+			</action>
+		</item>
+		<item label="DeadBeef">
+			<action name="Execute">
+				<execute>deadbeef</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="apps-graphics-menu"/>
+		<menu id="apps-net-menu"/>
+		<menu id="apps-office"/>
+		<separator/>
+		<menu id="system-menu"/>
+	</menu>
+</openbox_menu>
