@@ -28,7 +28,7 @@ alias stng='terminator --layout STNG'
 alias go='cd $(ls -d */ | fzf)'
 
 # Dotfile
-alias dotfile='git --git-dir=~/.dotfiles/ --work-tree=~'
+alias dotfile='git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias dfs='dotfile status'
 alias dfa='dotfile add -f'
 alias dfc='dotfile commit -m'
